@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobeTrek Adventures - Complete Site Map Architecture</title>
+  <link rel="stylesheet" href="wireframe_styles.css">
+  <style>
+    .sitemap-container {
+      padding: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .node {
+      background: #ffffff;
+      border: 2px solid #64748b;
+      border-radius: 8px;
+      padding: 14px 18px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+      min-width: 180px;
+    }
+    .node-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
+    .node-url {
+      font-size: 0.72rem;
+      color: #64748b;
+      font-family: monospace;
+      margin-top: 4px;
+    }
+    .node-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+    .badge-public { background: #e0f2fe; color: #0369a1; }
+    .badge-auth { background: #fef3c7; color: #b45309; }
+    .badge-customer { background: #dcfce7; color: #15803d; }
+    .badge-staff { background: #f1f5f9; color: #334155; }
+    .badge-admin { background: #fee2e2; color: #b91c1c; }
+
+    .tree-branch {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      position: relative;
+    }
+    .branch-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+    }
+    .connector-line {
+      width: 2px;
+      height: 24px;
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Bar -->
+  <div style="background: #0f172a; color: white; padding: 18px 40px; display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <h2 style="font-size: 1.25rem; font-weight: 700;">GlobeTrek Adventures &bull; Information Architecture & Site Map</h2>
+      <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Task 01 Deliverable: Hierarchical Sitemap with Role-Based Separation</p>
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <a href="index.html" class="wf-btn wf-btn-sm wf-btn-outline" style="color: white; border-color: #64748b;">All Mockups Hub</a>
+      <a href="http://localhost/globetrek/" class="wf-btn wf-btn-sm wf-btn-primary">View Live App</a>
+    </div>
+  </div>
+
+  <div class="sitemap-container">
+    <!-- Design Justification Card -->
+    <div class="wf-annotation mb-4">
+      <span class="wf-annotation-tag">Design Rationale</span>
+      <div>
+        <strong>Hierarchical 3-Tier Structure:</strong> The sitemap adopts a clear separation of concerns across 3 core user personas (Public/Travelers, Agency Staff, and Administrators). Flat navigation for discovery (tours, custom trips, about, contact) reduces friction and click-depth to 1 click from home. Restricted portals (Staff Operations Desk and Admin Executive Panel) maintain strict Role-Based Access Control (RBAC) to ensure enterprise data security.
+      </div>
+    </div>
+
+    <!-- ROOT NODE: HOME -->
+    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+      <div class="node" style="border: 3px solid #0f172a; background: #f8fafc; min-width: 260px;">
+        <span class="node-badge badge-public">Entry Point / Gateway</span>
+        <div class="node-title" style="font-size: 1.15rem; margin-top: 4px;">Homepage (Negombo Gateway)</div>
+        <div class="node-url">index.php</div>
+        <div style="font-size: 0.75rem; color: #475569; margin-top: 6px;">Hero search, Negombo highlights, featured packages, testimonials</div>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+      <div style="width: 2px; height: 30px; background: #64748b;"></div>
+    </div>
+
+    <!-- MAIN BRANCHES -->
+    <div class="tree-branch">
+      
+      <!-- BRANCH 1: TOUR DISCOVERY -->
+      <div class="branch-col">
+        <div class="node">
+          <span class="node-badge badge-public">Public Catalog</span>
+          <div class="node-title">Tour Packages</div>
+          <div class="node-url">views/packages.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-public">Detail View</span>
+          <div class="node-title">Package Detail</div>
+          <div class="node-url">views/package_detail.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node" style="border-style: dashed;">
+          <span class="node-badge badge-auth">Booking Sub-Action</span>
+          <div class="node-title">Instant Booking & Checkout</div>
+          <div class="node-url">controllers/booking_process.php</div>
+        </div>
+      </div>
+
+      <!-- BRANCH 2: TAILOR-MADE PLANNER -->
+      <div class="branch-col">
+        <div class="node">
+          <span class="node-badge badge-public">Bespoke Tours</span>
+          <div class="node-title">Custom Trip Planner</div>
+          <div class="node-url">views/custom_trip.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-public">Company Profile</span>
+          <div class="node-title">About Us & Fleet</div>
+          <div class="node-url">views/about.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-public">Support Desk</span>
+          <div class="node-title">Contact & Queries</div>
+          <div class="node-url">views/contact.php</div>
+        </div>
+      </div>
+
+      <!-- BRANCH 3: AUTHENTICATION -->
+      <div class="branch-col">
+        <div class="node">
+          <span class="node-badge badge-auth">Authentication</span>
+          <div class="node-title">Sign In / Login</div>
+          <div class="node-url">views/login.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-auth">Registration</span>
+          <div class="node-title">Sign Up / Register</div>
+          <div class="node-url">views/register.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-auth">Session Handler</span>
+          <div class="node-title">Auth & Role Process</div>
+          <div class="node-url">controllers/auth_process.php</div>
+        </div>
+      </div>
+
+      <!-- BRANCH 4: TRAVELER PORTAL -->
+      <div class="branch-col">
+        <div class="node" style="border-color: #16a34a;">
+          <span class="node-badge badge-customer">Customer Role</span>
+          <div class="node-title">Traveler Dashboard</div>
+          <div class="node-url">views/customer/dashboard.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-customer">Reservation</span>
+          <div class="node-title">My Bookings & History</div>
+          <div class="node-url">dashboard.php#tab-bookings</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-customer">Official Receipt</span>
+          <div class="node-title">Printable Travel Voucher</div>
+          <div class="node-url">views/customer/invoice.php</div>
+        </div>
+      </div>
+
+      <!-- BRANCH 5: STAFF OPERATIONS -->
+      <div class="branch-col">
+        <div class="node" style="border-color: #0284c7;">
+          <span class="node-badge badge-staff">Staff Role</span>
+          <div class="node-title">Staff Operations Desk</div>
+          <div class="node-url">staff/dashboard.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-staff">Package CRUD</span>
+          <div class="node-title">Manage Tour Packages</div>
+          <div class="node-url">staff/packages_manage.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-staff">Coordination</span>
+          <div class="node-title">Bookings & Hotel Logistics</div>
+          <div class="node-url">staff/bookings_manage.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-staff">Inquiry Desk</span>
+          <div class="node-title">Customer Query Reply</div>
+          <div class="node-url">staff/inquiries_manage.php</div>
+        </div>
+      </div>
+
+      <!-- BRANCH 6: ADMIN EXECUTIVE -->
+      <div class="branch-col">
+        <div class="node" style="border-color: #dc2626;">
+          <span class="node-badge badge-admin">Admin Role</span>
+          <div class="node-title">Executive Dashboard</div>
+          <div class="node-url">admin/dashboard.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-admin">Security & Accounts</span>
+          <div class="node-title">User & Staff Directory</div>
+          <div class="node-url">admin/users_manage.php</div>
+        </div>
+        <div class="connector-line"></div>
+        <div class="node">
+          <span class="node-badge badge-admin">Business Intelligence</span>
+          <div class="node-title">Sales & Audit Reports</div>
+          <div class="node-url">admin/reports.php</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

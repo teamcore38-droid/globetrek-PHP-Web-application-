@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low-Fi Wireframe: Admin Dashboard - GlobeTrek Adventures</title>
+  <link rel="stylesheet" href="wireframe_styles.css">
+</head>
+<body>
+  <div class="figma-frame">
+    <!-- Top Metadata Bar -->
+    <div style="background: #e2e8f0; padding: 10px 24px; font-size: 0.78rem; color: #475569; display: flex; justify-content: space-between; border-bottom: 1px solid #cbd5e1;">
+      <span><strong>Wireframe:</strong> Admin Executive Analytics & User Management &bull; Viewport: 1440 x 1400</span>
+      <span>GlobeTrek Adventures &bull; Task 01 UI Design</span>
+    </div>
+
+    <!-- Admin Header -->
+    <header class="wf-navbar" style="background: #1e1b4b; color: white; border-bottom: 2px solid #312e81;">
+      <div class="wf-logo" style="color: white;">
+        <div class="wf-logo-icon" style="background: #dc2626; color: white; border-color: white;">&#9733;</div>
+        <div>
+          <span>GlobeTrek</span> <strong>Executive Admin</strong>
+          <span style="display:block; font-size: 0.65rem; color: #c7d2fe; font-weight: normal;">SYSTEM & FINANCIAL AUDIT</span>
+        </div>
+      </div>
+      <ul class="wf-nav-links">
+        <li><a href="#" class="wf-nav-link active" style="color: white; border-bottom-color: white;">Analytics</a></li>
+        <li><a href="#" class="wf-nav-link" style="color: #c7d2fe;">User Directory</a></li>
+        <li><a href="#" class="wf-nav-link" style="color: #c7d2fe;">Sales Reports</a></li>
+        <li><a href="#" class="wf-nav-link" style="color: #c7d2fe;">Staff Operations</a></li>
+      </ul>
+      <div class="wf-nav-actions">
+        <span style="font-size: 0.85rem; color: white;">Chief Administrator</span>
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-outline" style="color: white; border-color: white;">Sign Out</a>
+      </div>
+    </header>
+
+    <!-- Design Rationale Annotation -->
+    <div style="padding: 0 40px;">
+      <div class="wf-annotation">
+        <span class="wf-annotation-tag">Design Rationale</span>
+        <span><strong>Executive Decision Support:</strong> High-level financial cards anchored at the top offer instant visibility into revenue streams. Paired with interactive category breakdown charts and RBAC staff provisioning, administrators can monitor business health and maintain strict system governance.</span>
+      </div>
+    </div>
+
+    <div class="wf-container" style="padding-top: 10px;">
+      
+      <!-- Financial Analytics Cards -->
+      <div class="wf-grid-4" style="margin-bottom: 24px;">
+        <div class="wf-card" style="border-left: 4px solid #16a34a;">
+          <span style="font-size: 0.72rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Gross Paid Revenue</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">$940.00</div>
+          <span style="font-size: 0.72rem; color: #16a34a;">Verified online card receipts</span>
+        </div>
+        <div class="wf-card" style="border-left: 4px solid #0284c7;">
+          <span style="font-size: 0.72rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Total Bookings</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">2</div>
+          <span style="font-size: 0.72rem; color: #64748b;">1 Confirmed &bull; 1 Pending</span>
+        </div>
+        <div class="wf-card" style="border-left: 4px solid #8b5cf6;">
+          <span style="font-size: 0.72rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Registered Travelers</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">1</div>
+          <span style="font-size: 0.72rem; color: #64748b;">Active customer accounts</span>
+        </div>
+        <div class="wf-card" style="border-left: 4px solid #f59e0b;">
+          <span style="font-size: 0.72rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Agency Staff</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">1</div>
+          <span style="font-size: 0.72rem; color: #64748b;">Negombo operations desk</span>
+        </div>
+      </div>
+
+      <!-- Charts & Shortcuts Grid -->
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px; margin-bottom: 30px;">
+        
+        <!-- Chart Component Wireframe -->
+        <div class="wf-card" style="padding: 20px;">
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px;">
+            [ Visual Analytics: Revenue by Tourism Category ]
+          </h3>
+          <div style="height: 200px; background: #f8fafc; border: 1px dashed #94a3b8; border-radius: 6px; display: flex; align-items: flex-end; justify-content: space-around; padding: 20px 10px;">
+            <div style="text-align: center;">
+              <div style="width: 48px; height: 90px; background: #94a3b8; border-radius: 4px; margin: 0 auto 6px;"></div>
+              <span style="font-size: 0.7rem; color: #64748b;">Coastal ($300)</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 48px; height: 140px; background: #475569; border-radius: 4px; margin: 0 auto 6px;"></div>
+              <span style="font-size: 0.7rem; color: #64748b;">Cultural ($640)</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 48px; height: 20px; background: #cbd5e1; border-radius: 4px; margin: 0 auto 6px;"></div>
+              <span style="font-size: 0.7rem; color: #64748b;">Hills ($0)</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 48px; height: 20px; background: #cbd5e1; border-radius: 4px; margin: 0 auto 6px;"></div>
+              <span style="font-size: 0.7rem; color: #64748b;">Safari ($0)</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 48px; height: 20px; background: #cbd5e1; border-radius: 4px; margin: 0 auto 6px;"></div>
+              <span style="font-size: 0.7rem; color: #64748b;">Hiking ($0)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Admin Quick Actions Component -->
+        <div class="wf-card">
+          <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 14px;">Executive Actions</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <button class="wf-btn wf-btn-sm wf-btn-primary" style="justify-content: flex-start; padding: 12px;">
+              + Create Staff Account
+            </button>
+            <button class="wf-btn wf-btn-sm wf-btn-outline" style="justify-content: flex-start; padding: 12px;">
+              [Icon] Export Audit Sales Report
+            </button>
+            <button class="wf-btn wf-btn-sm wf-btn-outline" style="justify-content: flex-start; padding: 12px;">
+              [Icon] View Database Backups
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Directory Table Wireframe -->
+      <div class="wf-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <h3 style="font-size: 1.15rem; font-weight: 700;">System Users & Role Governance</h3>
+          <div style="display: flex; gap: 6px;">
+            <button class="wf-btn wf-btn-sm wf-btn-secondary">Filter: All Users</button>
+            <button class="wf-btn wf-btn-sm wf-btn-primary">+ New Account</button>
+          </div>
+        </div>
+
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
+          <thead>
+            <tr style="background: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+              <th style="padding: 10px;">ID</th>
+              <th style="padding: 10px;">Name & Contact</th>
+              <th style="padding: 10px;">Assigned Role</th>
+              <th style="padding: 10px;">Phone</th>
+              <th style="padding: 10px;">Status</th>
+              <th style="padding: 10px; text-align: right;">Security Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 12px; font-weight: 700;">#1</td>
+              <td style="padding: 12px;">
+                <strong>Chief Administrator</strong><br>
+                <span style="font-size: 0.72rem; color: #64748b;">admin@globetrek.com</span>
+              </td>
+              <td style="padding: 12px;"><span style="background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">ADMIN</span></td>
+              <td style="padding: 12px;">+94 31 223 8890</td>
+              <td style="padding: 12px;"><span style="background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">ACTIVE</span></td>
+              <td style="padding: 12px; text-align: right;">
+                <button class="wf-btn wf-btn-sm wf-btn-secondary">[Reset Key]</button>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 12px; font-weight: 700;">#2</td>
+              <td style="padding: 12px;">
+                <strong>Kasun Perera</strong><br>
+                <span style="font-size: 0.72rem; color: #64748b;">staff@globetrek.com</span>
+              </td>
+              <td style="padding: 12px;"><span style="background: #e0f2fe; color: #075985; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">STAFF</span></td>
+              <td style="padding: 12px;">+94 77 123 4567</td>
+              <td style="padding: 12px;"><span style="background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">ACTIVE</span></td>
+              <td style="padding: 12px; text-align: right;">
+                <button class="wf-btn wf-btn-sm wf-btn-outline">[Deactivate]</button>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 12px; font-weight: 700;">#3</td>
+              <td style="padding: 12px;">
+                <strong>Sarah Jenkins</strong><br>
+                <span style="font-size: 0.72rem; color: #64748b;">traveler@gmail.com</span>
+              </td>
+              <td style="padding: 12px;"><span style="background: #f1f5f9; color: #334155; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">TRAVELER</span></td>
+              <td style="padding: 12px;">+44 7911 123456</td>
+              <td style="padding: 12px;"><span style="background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">ACTIVE</span></td>
+              <td style="padding: 12px; text-align: right;">
+                <button class="wf-btn wf-btn-sm wf-btn-outline">[Edit / Deactivate]</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- WIREFRAME FOOTER -->
+    <footer class="wf-footer">
+      <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #64748b;">
+        <span>GlobeTrek Adventures &bull; Admin Security Wireframe</span>
+        <span>Standard 1440px Canvas</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

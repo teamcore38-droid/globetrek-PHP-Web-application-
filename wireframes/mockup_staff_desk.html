@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low-Fi Wireframe: Staff Operations Desk - GlobeTrek Adventures</title>
+  <link rel="stylesheet" href="wireframe_styles.css">
+</head>
+<body>
+  <div class="figma-frame">
+    <!-- Top Metadata Bar -->
+    <div style="background: #e2e8f0; padding: 10px 24px; font-size: 0.78rem; color: #475569; display: flex; justify-content: space-between; border-bottom: 1px solid #cbd5e1;">
+      <span><strong>Wireframe:</strong> Staff Operations Desk & Package CRUD &bull; Viewport: 1440 x 1400</span>
+      <span>GlobeTrek Adventures &bull; Task 01 UI Design</span>
+    </div>
+
+    <!-- Staff Header -->
+    <header class="wf-navbar" style="background: #0f766e; color: white; border-bottom: 2px solid #115e59;">
+      <div class="wf-logo" style="color: white;">
+        <div class="wf-logo-icon" style="background: #115e59; color: white; border-color: white;">&#9881;</div>
+        <div>
+          <span>GlobeTrek</span> <strong>Staff Portal</strong>
+          <span style="display:block; font-size: 0.65rem; color: #ccfbf1; font-weight: normal;">NEGOMBO OPERATIONS DESK</span>
+        </div>
+      </div>
+      <ul class="wf-nav-links">
+        <li><a href="#" class="wf-nav-link active" style="color: white; border-bottom-color: white;">Dashboard</a></li>
+        <li><a href="#" class="wf-nav-link" style="color: #ccfbf1;">Manage Packages</a></li>
+        <li><a href="#" class="wf-nav-link" style="color: #ccfbf1;">Bookings Coordination</a></li>
+        <li><a href="#" class="wf-nav-link" style="color: #ccfbf1;">Customer Queries</a></li>
+      </ul>
+      <div class="wf-nav-actions">
+        <span style="font-size: 0.85rem; color: white;">Kasun Perera (Staff)</span>
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-outline" style="color: white; border-color: white;">Logout</a>
+      </div>
+    </header>
+
+    <!-- Design Rationale Annotation -->
+    <div style="padding: 0 40px;">
+      <div class="wf-annotation">
+        <span class="wf-annotation-tag">Design Rationale</span>
+        <span><strong>Operational Workflow Optimization:</strong> Dense table layouts with inline status badges and instant modal editing reduce tab switching for agency coordinators. Direct access to hotel assignment and chauffeur notes ensures prompt logistics preparation.</span>
+      </div>
+    </div>
+
+    <div class="wf-container" style="padding-top: 10px;">
+      
+      <!-- Operational KPIs -->
+      <div class="wf-grid-4" style="margin-bottom: 24px;">
+        <div class="wf-card" style="border-left: 4px solid #f59e0b;">
+          <span style="font-size: 0.72rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Pending Reservations</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">1</div>
+          <span style="font-size: 0.72rem; color: #f59e0b;">Needs hotel/transport confirmation</span>
+        </div>
+        <div class="wf-card" style="border-left: 4px solid #16a34a;">
+          <span style="font-size: 0.72rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Confirmed Tours</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">1</div>
+          <span style="font-size: 0.72rem; color: #16a34a;">Chauffeur assigned</span>
+        </div>
+        <div class="wf-card" style="border-left: 4px solid #0284c7;">
+          <span style="font-size: 0.72rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Active Tour Packages</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">5</div>
+          <span style="font-size: 0.72rem; color: #64748b;">Live on website</span>
+        </div>
+        <div class="wf-card" style="border-left: 4px solid #dc2626;">
+          <span style="font-size: 0.72rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Open Customer Inquiries</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">1</div>
+          <span style="font-size: 0.72rem; color: #dc2626;">Awaiting staff reply</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 style="font-size: 1.25rem; font-weight: 800;">Reservations & Provider Coordination</h3>
+        <div style="display: flex; gap: 10px;">
+          <button class="wf-btn wf-btn-sm wf-btn-primary">+ Add New Tour Package</button>
+          <button class="wf-btn wf-btn-sm wf-btn-outline">Customer Query Inbox</button>
+        </div>
+      </div>
+
+      <!-- Booking Coordination Table Wireframe -->
+      <div class="wf-card" style="margin-bottom: 30px;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
+          <thead>
+            <tr style="background: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+              <th style="padding: 10px;">Ref & Date</th>
+              <th style="padding: 10px;">Traveler</th>
+              <th style="padding: 10px;">Tour Package</th>
+              <th style="padding: 10px;">Party</th>
+              <th style="padding: 10px;">Total</th>
+              <th style="padding: 10px;">Status</th>
+              <th style="padding: 10px;">Logistics / Coordination Note</th>
+              <th style="padding: 10px; text-align: right;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 12px; font-family: monospace; font-weight: 700;">
+                GTA-2026-001<br>
+                <span style="font-size: 0.72rem; color: #64748b; font-weight: normal;">Nov 15, 2026</span>
+              </td>
+              <td style="padding: 12px;">
+                <strong>Sarah Jenkins</strong><br>
+                <span style="font-size: 0.72rem; color: #64748b;">traveler@gmail.com</span>
+              </td>
+              <td style="padding: 12px;">Negombo Coastal Lagoon Safari</td>
+              <td style="padding: 12px;">2 Persons</td>
+              <td style="padding: 12px; font-weight: 700;">$300.00</td>
+              <td style="padding: 12px;"><span style="background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">CONFIRMED</span></td>
+              <td style="padding: 12px; font-size: 0.78rem; color: #475569;">
+                [Note] Jetwing Blue Room 102 booked. Boat skipper Shantha assigned.
+              </td>
+              <td style="padding: 12px; text-align: right;">
+                <button class="wf-btn wf-btn-sm wf-btn-outline">[Update Status / Note]</button>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 12px; font-family: monospace; font-weight: 700;">
+                GTA-2026-002<br>
+                <span style="font-size: 0.72rem; color: #64748b; font-weight: normal;">Dec 05, 2026</span>
+              </td>
+              <td style="padding: 12px;">
+                <strong>David Miller</strong><br>
+                <span style="font-size: 0.72rem; color: #64748b;">david.m@outlook.com</span>
+              </td>
+              <td style="padding: 12px;">Sigiriya Rock & Ancient Triangle</td>
+              <td style="padding: 12px;">2 Persons</td>
+              <td style="padding: 12px; font-weight: 700;">$640.00</td>
+              <td style="padding: 12px;"><span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">PENDING</span></td>
+              <td style="padding: 12px; font-size: 0.78rem; color: #475569;">
+                [Note] Awaiting arrival flight number. Eco-lodge pre-reserved.
+              </td>
+              <td style="padding: 12px; text-align: right;">
+                <button class="wf-btn wf-btn-sm wf-btn-primary">[Assign Chauffeur]</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Quick Edit Modal Wireframe Component -->
+      <div style="border: 2px solid #0f766e; border-radius: 8px; padding: 24px; background: #f8fafc; max-width: 600px; margin: 0 auto;">
+        <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 12px; border-bottom: 1px solid #cbd5e1; padding-bottom: 8px;">
+          [ Modal Component: Update Booking GTA-2026-002 ]
+        </div>
+        <div class="wf-input-group">
+          <label class="wf-label">Booking Reservation Status</label>
+          <select class="wf-select">
+            <option>Pending Review</option>
+            <option selected>Confirmed (Service Assigned)</option>
+            <option>Tour Completed</option>
+            <option>Cancelled</option>
+          </select>
+        </div>
+        <div class="wf-input-group">
+          <label class="wf-label">Hotel & Chauffeur Coordination Note</label>
+          <textarea class="wf-input" rows="3" placeholder="Enter assigned hotel room number, chauffeur contact..."></textarea>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 8px;">
+          <button class="wf-btn wf-btn-sm wf-btn-outline">Cancel</button>
+          <button class="wf-btn wf-btn-sm wf-btn-primary">Save Changes</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WIREFRAME FOOTER -->
+    <footer class="wf-footer">
+      <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #64748b;">
+        <span>GlobeTrek Adventures &bull; Agency Staff Desk Wireframe</span>
+        <span>Figma Ready Auto-Layout</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

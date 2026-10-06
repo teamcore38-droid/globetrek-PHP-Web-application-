@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobeTrek Adventures - UI Wireframe Mockups & Site Map Hub</title>
+  <link rel="stylesheet" href="wireframe_styles.css">
+  <style>
+    .hub-header {
+      background: #0f172a;
+      color: white;
+      padding: 24px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .hub-nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .hub-tab {
+      background: #1e293b;
+      color: #94a3b8;
+      border: 1px solid #334155;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .hub-tab:hover, .hub-tab.active {
+      background: #028090;
+      color: #ffffff;
+      border-color: #028090;
+    }
+    .preview-frame {
+      width: 100%;
+      height: calc(100vh - 170px);
+      border: none;
+      background: #f8fafc;
+    }
+    .plugin-guide {
+      background: #fef9c3;
+      border-bottom: 1px solid #facc15;
+      color: #713f12;
+      padding: 10px 40px;
+      font-size: 0.82rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body style="padding-bottom: 0; overflow: hidden;">
+  <!-- Hub Header -->
+  <header class="hub-header">
+    <div>
+      <h1 style="font-size: 1.25rem; font-weight: 800; margin: 0; display: flex; align-items: center; gap: 8px;">
+        <span style="background: #028090; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem;">Task 01</span>
+        GlobeTrek Adventures &bull; UI Mockup Wireframes & Site Map
+      </h1>
+      <span style="font-size: 0.75rem; color: #94a3b8;">Cardiff Met / ICBT CSE5009 Web Application Development</span>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="hub-nav">
+      <a href="sitemap.html" target="mockupViewer" class="hub-tab active" onclick="setActive(this)">Site Map</a>
+      <a href="mockup_home.html" target="mockupViewer" class="hub-tab" onclick="setActive(this)">1. Homepage</a>
+      <a href="mockup_packages.html" target="mockupViewer" class="hub-tab" onclick="setActive(this)">2. Catalog & Search</a>
+      <a href="mockup_detail.html" target="mockupViewer" class="hub-tab" onclick="setActive(this)">3. Tour Details & Booking</a>
+      <a href="mockup_customer_dashboard.html" target="mockupViewer" class="hub-tab" onclick="setActive(this)">4. Customer Dashboard</a>
+      <a href="mockup_staff_desk.html" target="mockupViewer" class="hub-tab" onclick="setActive(this)">5. Staff Desk</a>
+      <a href="mockup_admin_dashboard.html" target="mockupViewer" class="hub-tab" onclick="setActive(this)">6. Admin Analytics</a>
+      <a href="http://localhost/globetrek/" target="_blank" class="hub-tab" style="background: #3b82f6; color: white; border-color: #3b82f6;">Live App &rarr;</a>
+    </nav>
+  </header>
+
+  <!-- Figma Plugin Instructions Bar -->
+  <div class="plugin-guide">
+    <div>
+      <strong>How to import to Figma:</strong> Open Figma &rarr; Run plugin <strong>"html.to.design"</strong> &rarr; Select "Import URL" &rarr; Paste any of the URLs below (or open file in browser & copy-paste into Figma).
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <button onclick="copyCurrentUrl()" style="background: #713f12; color: white; border: none; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; cursor: pointer;">
+        Copy Active URL for Figma
+      </button>
+      <a id="openNewTabBtn" href="sitemap.html" target="_blank" style="color: #713f12; font-weight: 700; text-decoration: underline;">
+        Open in New Tab &nearr;
+      </a>
+    </div>
+  </div>
+
+  <!-- Interactive Mockup Previewer -->
+  <iframe name="mockupViewer" id="mockupViewer" src="sitemap.html" class="preview-frame"></iframe>
+
+  <script>
+    function setActive(element) {
+      document.querySelectorAll('.hub-tab').forEach(t => t.classList.remove('active'));
+      element.classList.add('active');
+      document.getElementById('openNewTabBtn').href = element.getAttribute('href');
+    }
+
+    function copyCurrentUrl() {
+      const activeTab = document.querySelector('.hub-tab.active');
+      const href = activeTab ? activeTab.getAttribute('href') : 'sitemap.html';
+      const fullUrl = window.location.origin + '/globetrek/wireframes/' + href;
+      navigator.clipboard.writeText(fullUrl).then(() => {
+        alert('Copied to clipboard!\n' + fullUrl + '\n\nPaste this URL into your Figma "html.to.design" plugin.');
+      });
+    }
+  </script>
+</body>
+</html>

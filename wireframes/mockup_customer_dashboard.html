@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low-Fi Wireframe: Customer Dashboard & Voucher - GlobeTrek Adventures</title>
+  <link rel="stylesheet" href="wireframe_styles.css">
+</head>
+<body>
+  <div class="figma-frame">
+    <!-- Top Metadata Bar -->
+    <div style="background: #e2e8f0; padding: 10px 24px; font-size: 0.78rem; color: #475569; display: flex; justify-content: space-between; border-bottom: 1px solid #cbd5e1;">
+      <span><strong>Wireframe:</strong> Customer Traveler Dashboard & Voucher &bull; Viewport: 1440 x 1400</span>
+      <span>GlobeTrek Adventures &bull; Task 01 UI Design</span>
+    </div>
+
+    <!-- Wireframe Navbar -->
+    <header class="wf-navbar">
+      <div class="wf-logo">
+        <div class="wf-logo-icon">&#9678;</div>
+        <div>
+          <span>GlobeTrek</span> <strong>Adventures</strong>
+        </div>
+      </div>
+      <ul class="wf-nav-links">
+        <li><a href="#" class="wf-nav-link">Home</a></li>
+        <li><a href="#" class="wf-nav-link">Tour Packages</a></li>
+        <li><a href="#" class="wf-nav-link">Tailor-Made Trip</a></li>
+        <li><a href="#" class="wf-nav-link">Support</a></li>
+      </ul>
+      <div class="wf-nav-actions">
+        <span style="font-size: 0.85rem; font-weight: 600;">Sarah Jenkins (Traveler)</span>
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-outline">Sign Out</a>
+      </div>
+    </header>
+
+    <!-- User Profile Header -->
+    <div style="background: #0f172a; color: white; padding: 28px 40px; display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #334155; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">
+          SJ
+        </div>
+        <div>
+          <h2 style="font-size: 1.4rem; font-weight: 700; margin: 0;">Sarah Jenkins</h2>
+          <span style="font-size: 0.8rem; color: #94a3b8;">traveler@gmail.com &bull; Traveler Account #3</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 12px;">
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-primary" style="background: white; color: #0f172a;">+ Book New Tour</a>
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-outline" style="color: white; border-color: #64748b;">Plan Custom Trip</a>
+      </div>
+    </div>
+
+    <!-- Design Rationale Annotation -->
+    <div style="padding: 0 40px;">
+      <div class="wf-annotation">
+        <span class="wf-annotation-tag">Design Rationale</span>
+        <span><strong>Traveler Self-Service Architecture:</strong> The dashboard organizes all traveler interactions into 3 clear pill-tabs (Active Reservations, Custom Trip Requests, and Question Queries). One-click voucher printing provides offline convenience for international tourists upon arrival in Sri Lanka.</span>
+      </div>
+    </div>
+
+    <!-- KPI Metric Cards -->
+    <div class="wf-container" style="padding-top: 10px; padding-bottom: 20px;">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 28px;">
+        <div class="wf-card" style="border-left: 4px solid #0f172a;">
+          <span style="font-size: 0.75rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Total Bookings</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">2</div>
+        </div>
+        <div class="wf-card" style="border-left: 4px solid #16a34a;">
+          <span style="font-size: 0.75rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Custom Trip Requests</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">1</div>
+        </div>
+        <div class="wf-card" style="border-left: 4px solid #f59e0b;">
+          <span style="font-size: 0.75rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Inquiries Sent</span>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-top: 4px;">1</div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs Wireframe -->
+      <div style="display: flex; gap: 10px; border-bottom: 2px solid #e2e8f0; margin-bottom: 24px; padding-bottom: 8px;">
+        <button class="wf-btn wf-btn-sm wf-btn-primary" style="border-radius: 20px;">My Tour Bookings (2)</button>
+        <button class="wf-btn wf-btn-sm wf-btn-secondary" style="border-radius: 20px;">Custom Trips (1)</button>
+        <button class="wf-btn wf-btn-sm wf-btn-secondary" style="border-radius: 20px;">Questions & Replies (1)</button>
+      </div>
+
+      <!-- Bookings Table Wireframe -->
+      <div class="wf-card" style="margin-bottom: 30px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <strong style="font-size: 1.05rem;">My Booked Tour Packages</strong>
+          <span style="font-size: 0.75rem; color: #64748b;">Click Voucher to view/print receipt</span>
+        </div>
+
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
+          <thead>
+            <tr style="background: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+              <th style="padding: 10px 12px;">Booking Ref</th>
+              <th style="padding: 10px 12px;">Tour Package</th>
+              <th style="padding: 10px 12px;">Travel Date</th>
+              <th style="padding: 10px 12px;">Travelers</th>
+              <th style="padding: 10px 12px;">Amount</th>
+              <th style="padding: 10px 12px;">Payment</th>
+              <th style="padding: 10px 12px;">Status</th>
+              <th style="padding: 10px 12px; text-align: right;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 12px; font-family: monospace; font-weight: 700;">GTA-2026-001</td>
+              <td style="padding: 12px;">
+                <strong>Negombo Coastal Haven & Dutch Canal Safari</strong>
+                <div style="font-size: 0.72rem; color: #64748b;">Negombo, Western Province &bull; 2 Days</div>
+              </td>
+              <td style="padding: 12px;">Nov 15, 2026</td>
+              <td style="padding: 12px;">2 Persons</td>
+              <td style="padding: 12px; font-weight: 700;">$300.00</td>
+              <td style="padding: 12px;"><span style="background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">PAID</span></td>
+              <td style="padding: 12px;"><span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">CONFIRMED</span></td>
+              <td style="padding: 12px; text-align: right;">
+                <button class="wf-btn wf-btn-sm wf-btn-outline">[View Voucher]</button>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 12px; font-family: monospace; font-weight: 700;">GTA-2026-002</td>
+              <td style="padding: 12px;">
+                <strong>Sigiriya Rock & Ancient Cultural Triangle</strong>
+                <div style="font-size: 0.72rem; color: #64748b;">Sigiriya & Dambulla &bull; 3 Days</div>
+              </td>
+              <td style="padding: 12px;">Dec 05, 2026</td>
+              <td style="padding: 12px;">2 Persons</td>
+              <td style="padding: 12px; font-weight: 700;">$640.00</td>
+              <td style="padding: 12px;"><span style="background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">PAID</span></td>
+              <td style="padding: 12px;"><span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700;">PENDING</span></td>
+              <td style="padding: 12px; text-align: right;">
+                <button class="wf-btn wf-btn-sm wf-btn-outline">[View Voucher]</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Printable Voucher Component Wireframe -->
+      <div style="border: 2px dashed #94a3b8; border-radius: 8px; padding: 30px; background: #ffffff;">
+        <div style="display: flex; justify-content: space-between; border-bottom: 2px solid #0f172a; padding-bottom: 16px; margin-bottom: 20px;">
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 800; margin: 0;">GlobeTrek Adventures &bull; Official Travel Voucher</h3>
+            <span style="font-size: 0.75rem; color: #64748b;">No. 48, Lewis Place, Negombo Beach Road, Negombo, Sri Lanka</span>
+          </div>
+          <div style="text-align: right;">
+            <strong style="font-size: 1.1rem; color: #16a34a; display: block;">CONFIRMED RESERVATION</strong>
+            <span style="font-family: monospace; font-size: 0.85rem;">REF: GTA-2026-001</span>
+          </div>
+        </div>
+
+        <div class="wf-grid-2" style="margin-bottom: 20px; font-size: 0.85rem;">
+          <div>
+            <strong>Lead Traveler:</strong> Sarah Jenkins<br>
+            <strong>Email:</strong> traveler@gmail.com<br>
+            <strong>Party Size:</strong> 2 Adults
+          </div>
+          <div>
+            <strong>Tour:</strong> Negombo Coastal Haven & Dutch Canal<br>
+            <strong>Departure Date:</strong> November 15, 2026<br>
+            <strong>Chauffeur Meeting Point:</strong> Arrival Gate 2, CMB Airport
+          </div>
+        </div>
+
+        <div style="background: #f8fafc; border: 1px solid #cbd5e1; padding: 12px; font-size: 0.8rem; border-radius: 4px;">
+          <strong>Total Paid Amount:</strong> $300.00 &bull; <strong>Payment Method:</strong> Visa Debit (****4242) &bull; <strong>Status:</strong> Verified
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WIREFRAME FOOTER -->
+    <footer class="wf-footer">
+      <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #64748b;">
+        <span>GlobeTrek Adventures &bull; Customer Portal Wireframe</span>
+        <span>Figma Importable Layer Architecture</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

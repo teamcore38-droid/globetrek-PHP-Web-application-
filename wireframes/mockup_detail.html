@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low-Fi Wireframe: Package Detail & Booking Widget - GlobeTrek Adventures</title>
+  <link rel="stylesheet" href="wireframe_styles.css">
+</head>
+<body>
+  <div class="figma-frame">
+    <!-- Top Metadata Bar -->
+    <div style="background: #e2e8f0; padding: 10px 24px; font-size: 0.78rem; color: #475569; display: flex; justify-content: space-between; border-bottom: 1px solid #cbd5e1;">
+      <span><strong>Wireframe:</strong> Tour Details & Booking Calculator &bull; Viewport: 1440 x 1600</span>
+      <span>GlobeTrek Adventures &bull; Task 01 UI Design</span>
+    </div>
+
+    <!-- Wireframe Navbar -->
+    <header class="wf-navbar">
+      <div class="wf-logo">
+        <div class="wf-logo-icon">&#9678;</div>
+        <div>
+          <span>GlobeTrek</span> <strong>Adventures</strong>
+        </div>
+      </div>
+      <ul class="wf-nav-links">
+        <li><a href="#" class="wf-nav-link">Home</a></li>
+        <li><a href="#" class="wf-nav-link active">Tour Packages</a></li>
+        <li><a href="#" class="wf-nav-link">Tailor-Made Trip</a></li>
+        <li><a href="#" class="wf-nav-link">About Us</a></li>
+        <li><a href="#" class="wf-nav-link">Contact</a></li>
+      </ul>
+      <div class="wf-nav-actions">
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-outline">Sign In</a>
+      </div>
+    </header>
+
+    <!-- Tour Banner Placeholder -->
+    <section class="wf-image-placeholder" style="height: 280px; text-align: left; padding: 40px; justify-content: flex-end; align-items: flex-start; background: #334155; color: white;">
+      <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+        <span style="background: #ffffff; color: #0f172a; padding: 2px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 700;">[ Coastal & Lagoon ]</span>
+        <span style="background: rgba(255,255,255,0.2); color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.72rem;">[ Negombo, Western Province ]</span>
+      </div>
+      <h1 style="font-size: 2.2rem; font-weight: 800; color: white; margin-bottom: 6px;">
+        Negombo Coastal Haven & Dutch Canal Safari
+      </h1>
+      <p style="font-size: 0.95rem; color: #cbd5e1; max-width: 800px; margin: 0;">
+        Experience catamaran boat fishing, historic 17th-century Dutch canals, and seaside seafood.
+      </p>
+    </section>
+
+    <!-- Design Rationale Annotation -->
+    <div style="padding: 0 40px;">
+      <div class="wf-annotation">
+        <span class="wf-annotation-tag">Design Rationale</span>
+        <span><strong>Split Conversion Layout:</strong> Two-column split layout positions comprehensive tour specifications, day-by-day itineraries, and inclusions on the left, while anchoring an interactive sticky booking widget on the right. Travelers can review details while dynamically computing party totals.</span>
+      </div>
+    </div>
+
+    <!-- MAIN TWO-COLUMN CONTAINER -->
+    <div class="wf-container" style="padding-top: 10px;">
+      <div style="display: grid; grid-template-columns: 1fr 380px; gap: 36px; align-items: start;">
+        
+        <!-- LEFT COLUMN: TOUR CONTENT -->
+        <div>
+          <!-- Tour Key Statistics Strip -->
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; margin-bottom: 24px; text-align: center; background: #ffffff;">
+            <div style="border-right: 1px solid #e2e8f0;">
+              <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase;">Duration</span>
+              <strong style="font-size: 1.1rem; display: block; color: #0f172a;">2 Days / 1 Night</strong>
+            </div>
+            <div style="border-right: 1px solid #e2e8f0;">
+              <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase;">Group Max</span>
+              <strong style="font-size: 1.1rem; display: block; color: #0f172a;">12 Persons</strong>
+            </div>
+            <div style="border-right: 1px solid #e2e8f0;">
+              <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase;">Price</span>
+              <strong style="font-size: 1.1rem; display: block; color: #0f172a;">$150.00</strong>
+            </div>
+            <div>
+              <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase;">Rating</span>
+              <strong style="font-size: 1.1rem; display: block; color: #0f172a;">4.9 / 5 (★)</strong>
+            </div>
+          </div>
+
+          <!-- Day-by-Day Itinerary Component -->
+          <div class="wf-card" style="margin-bottom: 24px;">
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">
+              [Icon] Day-by-Day Tour Itinerary
+            </h3>
+            
+            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: #0f172a; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">1</div>
+              <div>
+                <strong style="display: block; font-size: 0.95rem; margin-bottom: 4px;">Day 1: Negombo Arrival, Dutch Canal Boat Cruise & Sunset</strong>
+                <p style="font-size: 0.85rem; color: #64748b; line-height: 1.4; margin: 0;">Arrival & greeting at Negombo headquarters &rarr; Private boat cruise through historic Dutch Canal and mangroves &rarr; Seafood lunch along Lewis Place &rarr; Beach sunset leisure.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 16px;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: #0f172a; color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0;">2</div>
+              <div>
+                <strong style="display: block; font-size: 0.95rem; margin-bottom: 4px;">Day 2: Catamaran Fishing Experience & Fish Market Lellama</strong>
+                <p style="font-size: 0.85rem; color: #64748b; line-height: 1.4; margin: 0;">Dawn traditional catamaran ride with local fishermen &rarr; Guided tour of Negombo open-air fish market &rarr; Authentic Sri Lankan culinary tasting &rarr; Chauffeur transfer to airport.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accommodations & Transport -->
+          <div class="wf-card" style="margin-bottom: 24px;">
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">
+              [Icon] Accommodation & Transit Details
+            </h3>
+            <div class="wf-grid-2">
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 14px; border-radius: 6px;">
+                <strong style="font-size: 0.85rem; display: block; margin-bottom: 4px;">Hotel Standard</strong>
+                <span style="font-size: 0.8rem; color: #64748b;">Heritance Negombo / Jetwing Blue (4-Star Beachfront Deluxe Room)</span>
+              </div>
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 14px; border-radius: 6px;">
+                <strong style="font-size: 0.85rem; display: block; margin-bottom: 4px;">Chauffeur & Fleet</strong>
+                <span style="font-size: 0.8rem; color: #64748b;">Private AC Vehicle + Certified Lagoon Boat Skipper</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inclusions vs Exclusions -->
+          <div class="wf-card">
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">
+              What's Included & Excluded
+            </h3>
+            <div class="wf-grid-2">
+              <div>
+                <strong style="color: #16a34a; font-size: 0.85rem; display: block; margin-bottom: 8px;">[✓] Included Services</strong>
+                <ul style="font-size: 0.8rem; color: #475569; list-style: none; display: flex; flex-direction: column; gap: 6px;">
+                  <li>✓ Private AC Vehicle throughout tour</li>
+                  <li>✓ 1 Night 4-Star beachfront resort stay</li>
+                  <li>✓ English-speaking local tourist chauffeur</li>
+                  <li>✓ Dutch canal boat cruise and permits</li>
+                </ul>
+              </div>
+              <div>
+                <strong style="color: #dc2626; font-size: 0.85rem; display: block; margin-bottom: 8px;">[✕] Excluded Services</strong>
+                <ul style="font-size: 0.8rem; color: #475569; list-style: none; display: flex; flex-direction: column; gap: 6px;">
+                  <li>✕ International air tickets</li>
+                  <li>✕ Personal bar expenses</li>
+                  <li>✕ Optional motorized water sports</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: STICKY BOOKING WIDGET -->
+        <aside style="background: #ffffff; border: 2px solid #0f172a; border-radius: 12px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px;">
+            <div>
+              <span style="font-size: 0.75rem; color: #64748b;">Price per person</span>
+              <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a;">$150.00</div>
+            </div>
+            <span style="background: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: 12px; font-size: 0.72rem; font-weight: 700;">Instant Booking</span>
+          </div>
+
+          <div style="border-top: 1px solid #e2e8f0; margin: 14px 0;"></div>
+
+          <!-- Booking Form -->
+          <div class="wf-input-group">
+            <label class="wf-label">Select Starting Date *</label>
+            <input type="date" class="wf-input" value="2026-11-15">
+          </div>
+
+          <div class="wf-input-group">
+            <label class="wf-label">Number of Travelers *</label>
+            <input type="number" class="wf-input" value="2" min="1" max="12">
+            <span style="font-size: 0.7rem; color: #64748b;">Max capacity: 12 persons</span>
+          </div>
+
+          <div class="wf-input-group">
+            <label class="wf-label">Special Requests (Optional)</label>
+            <textarea class="wf-input" rows="2" placeholder="e.g. Vegetarian diet, airport pickup..."></textarea>
+          </div>
+
+          <!-- Payment Simulation Box -->
+          <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin-bottom: 16px;">
+            <div style="font-size: 0.75rem; font-weight: 700; margin-bottom: 6px;">[Icon] Payment Simulation</div>
+            <input type="text" class="wf-input" value="4242 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 1234" style="margin-bottom: 6px;">
+            <div style="display: flex; gap: 8px;">
+              <input type="text" class="wf-input" value="12/28" style="width: 50%;">
+              <input type="password" class="wf-input" value="789" style="width: 50%;">
+            </div>
+          </div>
+
+          <!-- Total Price Calculator Display -->
+          <div style="background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <span style="font-weight: 600; font-size: 0.9rem;">Estimated Total:</span>
+            <strong style="font-size: 1.4rem; color: #0f172a;">$300.00</strong>
+          </div>
+
+          <button class="wf-btn wf-btn-primary" style="width: 100%; height: 48px; font-size: 1rem;">
+            [ CTA: Confirm & Book Tour ]
+          </button>
+
+          <div style="text-align: center; margin-top: 14px; font-size: 0.75rem; color: #64748b;">
+            [Icon: Lock] 100% Secure Checkout Guarantee<br>
+            Direct inquiries: +94 31 223 8890
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+    <!-- WIREFRAME FOOTER -->
+    <footer class="wf-footer">
+      <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #64748b;">
+        <span>GlobeTrek Adventures &bull; Task 01 UI Wireframe Model</span>
+        <span>Figma Ready DOM Structure</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

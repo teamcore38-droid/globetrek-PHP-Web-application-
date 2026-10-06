@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low-Fi Wireframe: Tour Packages Catalog - GlobeTrek Adventures</title>
+  <link rel="stylesheet" href="wireframe_styles.css">
+</head>
+<body>
+  <div class="figma-frame">
+    <!-- Top Metadata Bar -->
+    <div style="background: #e2e8f0; padding: 10px 24px; font-size: 0.78rem; color: #475569; display: flex; justify-content: space-between; border-bottom: 1px solid #cbd5e1;">
+      <span><strong>Wireframe:</strong> Tour Catalog & Filter Engine &bull; Viewport: 1440 x 1400</span>
+      <span>GlobeTrek Adventures &bull; Task 01 UI Design</span>
+    </div>
+
+    <!-- Wireframe Navbar -->
+    <header class="wf-navbar">
+      <div class="wf-logo">
+        <div class="wf-logo-icon">&#9678;</div>
+        <div>
+          <span>GlobeTrek</span> <strong>Adventures</strong>
+        </div>
+      </div>
+      <ul class="wf-nav-links">
+        <li><a href="#" class="wf-nav-link">Home</a></li>
+        <li><a href="#" class="wf-nav-link active">Tour Packages</a></li>
+        <li><a href="#" class="wf-nav-link">Tailor-Made Trip</a></li>
+        <li><a href="#" class="wf-nav-link">About Us</a></li>
+        <li><a href="#" class="wf-nav-link">Contact</a></li>
+      </ul>
+      <div class="wf-nav-actions">
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-outline">Sign In</a>
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-primary">Register</a>
+      </div>
+    </header>
+
+    <!-- Page Title Banner -->
+    <div style="background: #0f172a; color: white; padding: 36px 40px;">
+      <span style="font-size: 0.75rem; text-transform: uppercase; color: #94a3b8; font-weight: 700;">[ Breadcrumb: Home / Packages ]</span>
+      <h1 style="font-size: 2.2rem; font-weight: 800; margin: 6px 0;">Sri Lanka Tour Packages</h1>
+      <p style="font-size: 0.95rem; color: #94a3b8; margin: 0;">Explore private and small-group journeys crafted by Negombo local specialists.</p>
+    </div>
+
+    <!-- Design Rationale Annotation -->
+    <div style="padding: 0 40px;">
+      <div class="wf-annotation">
+        <span class="wf-annotation-tag">Design Rationale</span>
+        <span><strong>Faceted Search Layout:</strong> Left-hand filter sidebar allows travelers to refine options by multiple criteria simultaneously (Keyword, Category, Duration, Budget). Asymmetrical 280px sidebar + flex content maximizes screen utilization on desktop while collapsing into an offcanvas drawer on mobile devices.</span>
+      </div>
+    </div>
+
+    <!-- MAIN CATALOG LAYOUT -->
+    <div class="wf-container" style="padding-top: 10px;">
+      <div class="wf-grid-sidebar">
+        
+        <!-- SIDEBAR FILTERS -->
+        <aside style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px;">
+            <strong style="font-size: 1rem;">[Icon] Filters</strong>
+            <span style="font-size: 0.75rem; color: #64748b; text-decoration: underline; cursor: pointer;">Reset All</span>
+          </div>
+
+          <!-- Keyword Search -->
+          <div class="wf-input-group">
+            <label class="wf-label">Search Keyword</label>
+            <input type="text" class="wf-input" placeholder="Destination, title...">
+          </div>
+
+          <!-- Category Select -->
+          <div class="wf-input-group">
+            <label class="wf-label">Tour Category</label>
+            <select class="wf-select">
+              <option>All Categories</option>
+              <option>Coastal & Lagoon</option>
+              <option>Cultural Heritage</option>
+              <option>Hill Country & Nature</option>
+              <option>Wildlife Safari</option>
+              <option>Adventure & Hiking</option>
+            </select>
+          </div>
+
+          <!-- Duration Radio / Checkboxes -->
+          <div class="wf-input-group">
+            <label class="wf-label">Duration</label>
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: #475569;">
+              <label><input type="radio" name="dur" checked> Any Duration</label>
+              <label><input type="radio" name="dur"> 1 - 2 Days (Weekend / Coastal)</label>
+              <label><input type="radio" name="dur"> 3 - 4 Days (Triangle & Hills)</label>
+              <label><input type="radio" name="dur"> 5+ Days (Grand Island Tour)</label>
+            </div>
+          </div>
+
+          <!-- Budget Slider -->
+          <div class="wf-input-group">
+            <div style="display: flex; justify-content: space-between;">
+              <label class="wf-label">Max Budget (USD)</label>
+              <strong style="font-size: 0.85rem;">$600</strong>
+            </div>
+            <input type="range" min="100" max="1000" style="width: 100%;">
+          </div>
+
+          <button class="wf-btn wf-btn-primary" style="width: 100%; margin-top: 8px;">
+            Apply Filters
+          </button>
+
+          <!-- Instant Live Search -->
+          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid #e2e8f0;">
+            <label class="wf-label">Instant Live Filter</label>
+            <input type="text" class="wf-input" placeholder="Type to filter cards...">
+            <span style="font-size: 0.7rem; color: #64748b; display: block; margin-top: 4px;">Dynamic JavaScript filtering without reload</span>
+          </div>
+        </aside>
+
+        <!-- PACKAGES GRID -->
+        <main>
+          <!-- Top Results Bar -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <span style="font-size: 0.9rem; color: #64748b;">Showing <strong>5 Tour Packages</strong> found</span>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 0.85rem; color: #64748b;">Sort By:</span>
+              <select class="wf-select" style="width: auto; padding: 6px 12px;">
+                <option>Featured First</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Duration: Short to Long</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="wf-grid-2">
+            <!-- Card 1 -->
+            <div class="wf-card">
+              <div class="wf-image-placeholder" style="height: 180px; margin-bottom: 12px; border-radius: 4px;">
+                [ Image Placeholder: Negombo Lagoon & Boat Safari ]
+                <span style="position: absolute; bottom: 8px; left: 8px; background: #0f172a; color: white; padding: 2px 8px; font-size: 0.68rem; border-radius: 4px;">Negombo, Western Province</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b; margin-bottom: 6px;">
+                <span>Coastal & Lagoon</span>
+                <span>2 Days / 1 Night</span>
+              </div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; color: #0f172a;">Negombo Coastal Lagoon & Canal Safari</h3>
+              <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 12px; line-height: 1.4;">Catamaran fishing boats, mangrove cruises, fish lellama, and beachfront resort.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+                <div>
+                  <span style="font-size: 0.7rem; color: #64748b;">From</span>
+                  <strong style="font-size: 1.25rem; color: #0f172a; display: block;">$150.00</strong>
+                </div>
+                <a href="#" class="wf-btn wf-btn-sm wf-btn-primary">Explore & Book &rarr;</a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="wf-card">
+              <div class="wf-image-placeholder" style="height: 180px; margin-bottom: 12px; border-radius: 4px;">
+                [ Image Placeholder: Sigiriya Lion Rock ]
+                <span style="position: absolute; bottom: 8px; left: 8px; background: #0f172a; color: white; padding: 2px 8px; font-size: 0.68rem; border-radius: 4px;">Sigiriya & Dambulla</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b; margin-bottom: 6px;">
+                <span>Cultural Heritage</span>
+                <span>3 Days / 2 Nights</span>
+              </div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; color: #0f172a;">Sigiriya Rock & Ancient Cultural Triangle</h3>
+              <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 12px; line-height: 1.4;">Ascend Sigiriya citadel, ancient cave monasteries, and traditional village lunch.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+                <div>
+                  <span style="font-size: 0.7rem; color: #64748b;">From</span>
+                  <strong style="font-size: 1.25rem; color: #0f172a; display: block;">$340.00</strong>
+                </div>
+                <a href="#" class="wf-btn wf-btn-sm wf-btn-primary">Explore & Book &rarr;</a>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="wf-card">
+              <div class="wf-image-placeholder" style="height: 180px; margin-bottom: 12px; border-radius: 4px;">
+                [ Image Placeholder: Ella Nine Arch Bridge ]
+                <span style="position: absolute; bottom: 8px; left: 8px; background: #0f172a; color: white; padding: 2px 8px; font-size: 0.68rem; border-radius: 4px;">Ella & Nuwara Eliya</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b; margin-bottom: 6px;">
+                <span>Hill Country & Nature</span>
+                <span>4 Days / 3 Nights</span>
+              </div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; color: #0f172a;">Ella Mountain Odyssey & Scenic Tea Rails</h3>
+              <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 12px; line-height: 1.4;">Highland train ride, Nine Arch viaduct, Little Adam's peak, and tea factory tasting.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+                <div>
+                  <span style="font-size: 0.7rem; color: #64748b;">From</span>
+                  <strong style="font-size: 1.25rem; color: #0f172a; display: block;">$440.00</strong>
+                </div>
+                <a href="#" class="wf-btn wf-btn-sm wf-btn-primary">Explore & Book &rarr;</a>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="wf-card">
+              <div class="wf-image-placeholder" style="height: 180px; margin-bottom: 12px; border-radius: 4px;">
+                [ Image Placeholder: Yala National Park Safari ]
+                <span style="position: absolute; bottom: 8px; left: 8px; background: #0f172a; color: white; padding: 2px 8px; font-size: 0.68rem; border-radius: 4px;">Yala & Mirissa Coast</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b; margin-bottom: 6px;">
+                <span>Wildlife & Safari</span>
+                <span>4 Days / 3 Nights</span>
+              </div>
+              <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; color: #0f172a;">Yala Wild Leopard & Southern Ocean Whales</h3>
+              <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 12px; line-height: 1.4;">4x4 safari jeep tracking leopards and sloth bears, plus Mirissa whale watching cruise.</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+                <div>
+                  <span style="font-size: 0.7rem; color: #64748b;">From</span>
+                  <strong style="font-size: 1.25rem; color: #0f172a; display: block;">$510.00</strong>
+                </div>
+                <a href="#" class="wf-btn wf-btn-sm wf-btn-primary">Explore & Book &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </main>
+
+      </div>
+    </div>
+
+    <!-- WIREFRAME FOOTER -->
+    <footer class="wf-footer">
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748b;">
+        <span>GlobeTrek Adventures &bull; Negombo, Sri Lanka</span>
+        <span>Wireframe Model for Figma Import</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

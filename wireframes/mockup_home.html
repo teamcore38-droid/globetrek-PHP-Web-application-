@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low-Fi Wireframe: Homepage - GlobeTrek Adventures</title>
+  <link rel="stylesheet" href="wireframe_styles.css">
+</head>
+<body>
+  <!-- Master Canvas / 1440px Desktop Frame for Figma Importer -->
+  <div class="figma-frame">
+    
+    <!-- Top Metadata Bar for Designer/Reviewer -->
+    <div style="background: #e2e8f0; padding: 10px 24px; font-size: 0.78rem; color: #475569; display: flex; justify-content: space-between; border-bottom: 1px solid #cbd5e1;">
+      <span><strong>Wireframe:</strong> Homepage (Landing Page) &bull; Viewport: 1440 x 1800</span>
+      <span>GlobeTrek Adventures &bull; Task 01 UI Design</span>
+    </div>
+
+    <!-- Wireframe Navbar -->
+    <header class="wf-navbar">
+      <div class="wf-logo">
+        <div class="wf-logo-icon">&#9678;</div>
+        <div>
+          <span>GlobeTrek</span> <strong>Adventures</strong>
+          <span style="display:block; font-size: 0.65rem; color: #64748b; font-weight: normal;">NEGOMBO &bull; SRI LANKA</span>
+        </div>
+      </div>
+      <ul class="wf-nav-links">
+        <li><a href="#" class="wf-nav-link active">Home</a></li>
+        <li><a href="#" class="wf-nav-link">Tour Packages</a></li>
+        <li><a href="#" class="wf-nav-link">Tailor-Made Trip</a></li>
+        <li><a href="#" class="wf-nav-link">About Us</a></li>
+        <li><a href="#" class="wf-nav-link">Contact</a></li>
+      </ul>
+      <div class="wf-nav-actions">
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-outline">Sign In</a>
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-primary">Register</a>
+      </div>
+    </header>
+
+    <!-- Annotation: Navigation Bar -->
+    <div style="padding: 0 40px;">
+      <div class="wf-annotation">
+        <span class="wf-annotation-tag">Design Rationale</span>
+        <span><strong>Persistent Sticky Navigation:</strong> Clear primary navigation with high contrast Sign In / Register buttons ensures zero friction for returning travelers or new customers on desktop and mobile.</span>
+      </div>
+    </div>
+
+    <!-- HERO SECTION WIREFRAME -->
+    <section style="padding: 70px 40px; text-align: center; background: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+      <div style="max-width: 850px; margin: 0 auto;">
+        <span style="display: inline-block; padding: 4px 14px; border: 1px solid #94a3b8; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 16px; background: #ffffff;">
+          [ Tag: Negombo Headquarters &bull; Established 2024 ]
+        </span>
+        <h1 style="font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 16px; color: #0f172a;">
+          Discover the Wonder of Sri Lanka
+        </h1>
+        <p style="font-size: 1.1rem; color: #64748b; margin-bottom: 32px;">
+          Sun-kissed Negombo beaches, ancient Sigiriya ruins, misty Ella mountain rails, and wild Yala leopard safaris. Handcrafted private journeys.
+        </p>
+
+        <!-- Search Card Component -->
+        <div style="background: #ffffff; border: 2px solid #64748b; border-radius: 12px; padding: 24px; text-align: left; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+          <div style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 16px; align-items: flex-end;">
+            <div class="wf-input-group" style="margin: 0;">
+              <label class="wf-label">Destination / Activity</label>
+              <input type="text" class="wf-input" placeholder="e.g. Negombo, Sigiriya, Safari...">
+            </div>
+            <div class="wf-input-group" style="margin: 0;">
+              <label class="wf-label">Tour Category</label>
+              <select class="wf-select">
+                <option>All Categories</option>
+                <option>Coastal & Lagoon</option>
+                <option>Cultural Heritage</option>
+                <option>Hill Country</option>
+                <option>Wildlife Safari</option>
+              </select>
+            </div>
+            <div class="wf-input-group" style="margin: 0;">
+              <label class="wf-label">Duration</label>
+              <select class="wf-select">
+                <option>Any Duration</option>
+                <option>1 - 2 Days</option>
+                <option>3 - 4 Days</option>
+                <option>5+ Days</option>
+              </select>
+            </div>
+            <div>
+              <button class="wf-btn wf-btn-primary" style="width: 100%; height: 44px;">
+                Find Tours
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST METRICS WIREFRAME -->
+    <section style="padding: 24px 40px; border-bottom: 1px solid #cbd5e1; background: #ffffff;">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); text-align: center;">
+        <div style="border-right: 1px solid #e2e8f0; padding: 10px;">
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a;">1,450+</div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; color: #64748b; font-weight: 600;">Happy Travelers</div>
+        </div>
+        <div style="border-right: 1px solid #e2e8f0; padding: 10px;">
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a;">100%</div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; color: #64748b; font-weight: 600;">Local Negombo Guides</div>
+        </div>
+        <div style="border-right: 1px solid #e2e8f0; padding: 10px;">
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a;">24/7</div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; color: #64748b; font-weight: 600;">Hotline & WhatsApp Support</div>
+        </div>
+        <div style="padding: 10px;">
+          <div style="font-size: 1.8rem; font-weight: 800; color: #0f172a;">4.9 / 5</div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; color: #64748b; font-weight: 600;">Traveler Rating</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEGOMBO SHOWCASE SECTION -->
+    <section class="wf-container">
+      <div class="wf-grid-2" style="align-items: center;">
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #64748b; display: block; margin-bottom: 8px;">
+            [ Section: Regional Identity ]
+          </span>
+          <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 16px; color: #0f172a;">
+            Negombo: The Coastal Gateway to Your Holiday
+          </h2>
+          <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 20px;">
+            Known as the "Little Rome" of Sri Lanka and located 15 minutes from Colombo airport (CMB). Our home headquarters crafts authentic coastal lagoon catamarans and private island adventures.
+          </p>
+          <div class="wf-grid-2" style="gap: 16px;">
+            <div style="border: 1px solid #cbd5e1; padding: 12px; border-radius: 6px;">
+              <strong style="display: block; font-size: 0.85rem;">[Icon] Dutch Canal Safari</strong>
+              <span style="font-size: 0.75rem; color: #64748b;">Mangrove cruises and bird watching.</span>
+            </div>
+            <div style="border: 1px solid #cbd5e1; padding: 12px; border-radius: 6px;">
+              <strong style="display: block; font-size: 0.85rem;">[Icon] Sunset Beachfront</strong>
+              <span style="font-size: 0.75rem; color: #64748b;">Fresh seafood along Lewis Place.</span>
+            </div>
+          </div>
+        </div>
+        <div class="wf-image-placeholder" style="height: 320px; border-radius: 8px;">
+          <div style="font-size: 1.1rem; margin-bottom: 6px;">[ Hero Image: Negombo Lagoon & Boat Fleet ]</div>
+          <div style="font-size: 0.75rem; color: #64748b;">Resolution: 600 x 380px &bull; High-res asset</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED TOURS GRID WIREFRAME -->
+    <section class="wf-container" style="padding-top: 0;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
+        <div>
+          <h2 style="font-size: 1.8rem; font-weight: 800; color: #0f172a;">Popular Tour Packages</h2>
+          <span style="font-size: 0.9rem; color: #64748b;">Top rated curated journeys across Sri Lanka</span>
+        </div>
+        <a href="#" class="wf-btn wf-btn-sm wf-btn-outline">View All Packages &rarr;</a>
+      </div>
+
+      <div class="wf-grid-3">
+        <!-- Tour Card 1 -->
+        <div class="wf-card">
+          <div class="wf-image-placeholder" style="height: 180px; border-radius: 4px; margin-bottom: 14px;">
+            [ Image: Negombo Coastal Lagoon & Dutch Canal ]
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b; margin-bottom: 6px;">
+            <span>[ Category: Coastal ]</span>
+            <span>[ 2 Days / 1 Night ]</span>
+          </div>
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; color: #0f172a;">
+            Negombo Coastal Lagoon & Dutch Canal Safari
+          </h3>
+          <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">
+            Catamaran rides, fresh seafood masterclass, and sunset walks along Negombo shores.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+            <div>
+              <span style="font-size: 0.7rem; color: #64748b; display: block;">Per Person</span>
+              <strong style="font-size: 1.2rem; color: #0f172a;">$150.00</strong>
+            </div>
+            <a href="#" class="wf-btn wf-btn-sm wf-btn-secondary">View Details</a>
+          </div>
+        </div>
+
+        <!-- Tour Card 2 -->
+        <div class="wf-card">
+          <div class="wf-image-placeholder" style="height: 180px; border-radius: 4px; margin-bottom: 14px;">
+            [ Image: Sigiriya Rock Fortress & Dambulla ]
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b; margin-bottom: 6px;">
+            <span>[ Category: Cultural Heritage ]</span>
+            <span>[ 3 Days / 2 Nights ]</span>
+          </div>
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; color: #0f172a;">
+            Sigiriya Rock & Ancient Cultural Triangle
+          </h3>
+          <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">
+            UNESCO world heritage citadel ascent, cave temples, and authentic village bullock cart safari.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+            <div>
+              <span style="font-size: 0.7rem; color: #64748b; display: block;">Per Person</span>
+              <strong style="font-size: 1.2rem; color: #0f172a;">$340.00</strong>
+            </div>
+            <a href="#" class="wf-btn wf-btn-sm wf-btn-secondary">View Details</a>
+          </div>
+        </div>
+
+        <!-- Tour Card 3 -->
+        <div class="wf-card">
+          <div class="wf-image-placeholder" style="height: 180px; border-radius: 4px; margin-bottom: 14px;">
+            [ Image: Ella Nine Arch Bridge & Blue Train ]
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b; margin-bottom: 6px;">
+            <span>[ Category: Hill Country ]</span>
+            <span>[ 4 Days / 3 Nights ]</span>
+          </div>
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; color: #0f172a;">
+            Ella Mountain Odyssey & Scenic Tea Rails
+          </h3>
+          <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 14px; line-height: 1.4;">
+            Observation blue train ride, Little Adam's peak hike, and colonial Ceylon tea plantation tours.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 10px;">
+            <div>
+              <span style="font-size: 0.7rem; color: #64748b; display: block;">Per Person</span>
+              <strong style="font-size: 1.2rem; color: #0f172a;">$440.00</strong>
+            </div>
+            <a href="#" class="wf-btn wf-btn-sm wf-btn-secondary">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section style="background: #1e293b; color: #ffffff; padding: 50px 40px; text-align: center;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 10px;">
+        Need a Tailor-Made Itinerary?
+      </h2>
+      <p style="font-size: 0.95rem; color: #94a3b8; max-width: 600px; margin: 0 auto 24px;">
+        Let our local Negombo destination specialists design your dream itinerary tailored to your dates and budget.
+      </p>
+      <a href="#" class="wf-btn wf-btn-primary" style="background: #ffffff; color: #0f172a;">
+        [ CTA: Design Your Custom Trip ]
+      </a>
+    </section>
+
+    <!-- WIREFRAME FOOTER -->
+    <footer class="wf-footer">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 30px; margin-bottom: 30px;">
+        <div>
+          <div class="wf-logo" style="margin-bottom: 12px;">GlobeTrek Adventures</div>
+          <p style="font-size: 0.8rem; color: #64748b; line-height: 1.5;">
+            Premier travel agency headquartered on Lewis Place, Negombo, Sri Lanka. Delivering authentic cultural and wildlife experiences.
+          </p>
+        </div>
+        <div>
+          <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 10px;">Quick Links</h4>
+          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem; color: #64748b;">
+            <span>Home</span>
+            <span>Tour Packages</span>
+            <span>Tailor-Made Trip</span>
+            <span>About Us</span>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 10px;">Portals</h4>
+          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem; color: #64748b;">
+            <span>Traveler Login</span>
+            <span>Register Account</span>
+            <span>Staff Portal</span>
+            <span>Admin Executive</span>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 10px;">Negombo Office</h4>
+          <p style="font-size: 0.8rem; color: #64748b;">
+            No. 48, Lewis Place, Negombo, Sri Lanka<br>
+            Hotline: +94 77 123 4567<br>
+            Email: info@globetrekadventures.com
+          </p>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #cbd5e1; padding-top: 16px; font-size: 0.75rem; color: #94a3b8; text-align: center;">
+        &copy; 2026 GlobeTrek Adventures (Pvt) Ltd. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
